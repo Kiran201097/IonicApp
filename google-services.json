@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "541471164886",
+    "project_id": "swad-c3fb0",
+    "storage_bucket": "swad-c3fb0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541471164886:android:52f183ef37b6b5a503bc77",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "541471164886-6tsjnd4f8n4eds41gm38qc5lrgil9gqk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkgeMMZviT8F-UA6K_RbSLeCoY8NIi8Oc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "541471164886-6tsjnd4f8n4eds41gm38qc5lrgil9gqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
