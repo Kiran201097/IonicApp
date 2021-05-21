@@ -1,0 +1,37 @@
+<ion-view>
+  <ion-header-bar class="bar-head">
+    <a href="#/tab/dash" class="background"><span class="ion-arrow-left-c "></span></a>
+    <span class="font heading">My Account</span>
+  </ion-header-bar>
+  <ion-content>
+    <div class="{{hide}}">
+      <br>
+      <button class="button pay" ng-click="login()">
+        Login
+      </button>
+      <br><br>
+      <div>
+        <a class="item item-icon-right" href="#">
+          &nbsp;<i class="ion-location"></i>
+          <span> &nbsp; &nbsp; &nbsp; &nbsp;Store Locations</span>
+          <i class="icon ion-chevron-right"></i>
+        </a>
+      </div>
+      <div>
+        <a class="item item-icon-right" href="#">
+          <i class="ion-information-circled"></i>
+          <span> &nbsp; &nbsp; &nbsp; About Us</span>
+          <i class="icon ion-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+    <div class="{{show}}">
+      <div class="card padding font">
+        <p>Name&nbsp; : {{user.username}}</p>
+        <p>Email : {{user.email}}</p>
+        <p>Phone : {{user.phone}}</p>
+      </div>
+      <button type="button" class="pay" ng-click="logout()">Logout</button>
+    </div>
+  </ion-content>
+</ion-view>

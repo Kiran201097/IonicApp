@@ -1,0 +1,34 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-head">
+        <a href="#/tab/account" class="background"><span class="ion-arrow-left-c "></span></a>
+        <span class="font heading">Register</span>
+    </ion-header-bar>
+    <ion-content>
+        <div id="login" class="card">
+            <p style="color: red;">{{message}}</p>
+            <form ng-submit="doRegister()">
+                <div class="list">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">User Name<span style="color: red;">*</span></span>
+                        <input type="text" ng-model="registerData.username" placeholder="FirstName LastName">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email<span style="color: red;">*</span></span>
+                        <input type="text" ng-model="registerData.email" placeholder="Email">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Phone No.<span style="color: red;">*</span></span>
+                        <input type="number" ng-model="registerData.phone" placeholder="1234567890">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Password<span style="color: red;">*</span></span>
+                        <input type="password" ng-model="registerData.password" placeholder="A$sdh2345#">
+                    </label>
+                </div>
+                <button type="submit" class="button button-block button-balanced">
+                    Register
+                </button>
+            </form>
+        </div>
+    </ion-content>
+</ion-modal-view>

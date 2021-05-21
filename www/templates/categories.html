@@ -1,0 +1,41 @@
+<ion-view>
+  <ion-header-bar class="bar-head">
+    <a href="#/tab/dash" class="background"><span class="ion-arrow-left-c "></span></a>
+    <span class="font heading">Categories</span>
+    <a href="#/tab/cart" class="background"><i class="icon ion-android-cart cart" ng-controller="CartCtrl"
+        ng-click="showCart()"></i></a>
+  </ion-header-bar>
+  <ion-content>
+    <div class="padding ">
+      <p class="font cat-font">Classic Combo</p>
+    </div>
+    <div class="card" ng-repeat="food in foods" ng-controller="CategoriesCtrl">
+      <img ng-src="{{food.imgUrl}}" class="img-slide">
+      <div class="item item-text-wrap">
+        <div class="row">
+          <div class="col col-10"><img src="img/veg.jpg" style="height: 15px;width: 15px;"></div>
+          <div class="col col-50">
+            <span class="font">{{food.title}}</span>
+          </div>
+          <div class="col cat-item"><span>
+              <input type="button" class="inde" value="-" ng-click="decrement()">
+              &nbsp;{{value}}&nbsp;
+              <input type="button" class="inde" value="+" ng-click="increment()">
+            </span>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col col-67">
+            <span class="font">&#x20B9; {{food.price}}</span>
+          </div>
+          <div class="col">
+            <button class="atc" type="button" ng-controller="CartCtrl"
+              ng-click="addToCart({{food.id}},'{{food.title}}',{{food.price}})">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,47 @@
+<ion-view>
+  <ion-header-bar class="bar-head">
+    <a href="#/tab/dash" class="background">
+      <span class="ion-arrow-left-c "></span>
+    </a>
+    <span class="font heading">Orders</span>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list card {{hide}}" ng-controller="AccountCtrl" style="position: absolute; top:10%">
+      <div class="item item-body">
+        <img class="full-image" src="img/order.png">
+        <br>
+        <div align="center">
+          You need to login to access this section of the app
+        </div>
+        <br>
+        <button class="button pay" ng-controller="AccountCtrl" ng-click="login()">
+          Login
+        </button>
+
+      </div>
+
+    </div>
+    <div class="{{show}}" ng-controller="AccountCtrl">
+      <div class="card" ng-repeat="order in orderHistory">
+        <div class="item item-text-wrap">
+          Date : {{order.date}}
+          <hr>
+          <div class="row">
+            <div class="col"><b>Order Id</b></div>
+            <div class="col col-50"><b>Title</b></div>
+            <div class="col"><b>Price</b></div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col">{{order.id}}</div>
+            <div class="col col-50">
+              <span ng-repeat="item in order.items">{{item.title}}<br><br></span>
+            </div>
+            <div class="col">{{order.totalPrice}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </ion-content>
+</ion-view>

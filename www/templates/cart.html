@@ -1,0 +1,53 @@
+<ion-view ng-controller="CartCtrl">
+    <ion-header-bar class="bar-head">
+        <div>
+            <a href="#/tab/categories" class="background">
+                <span class="ion-arrow-left-c "></span>
+            </a>
+            <span class="font heading">Cart</span>
+            <button ng-click="edit()" class="edit {{class1}}">Edit</button>
+            <button ng-click="submit()" class="edit {{class2}}">Submit</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="row">
+            <div class="col {{class3}}">
+                <b>Item</b>
+            </div>
+            <div class="col {{class4}} ">
+                <b>qty</b>
+            </div>
+            <div class="col col-20">
+                <b>Price</b>
+            </div>
+            <div class="col col-10"></div>
+        </div>
+        <hr>
+        <h3 class="font {{cartnone}}">No items in cart</h3>
+        <div class="row" ng-repeat="order in Orders">
+
+            <div class="col {{class3}}">{{order.title}}</div>
+            <div class="col {{class4}} ">
+                <span class="{{class2}}">
+                    <input type="button" class="inde" value="-" ng-click="decrement({{order.id}})">
+                    {{order.quantity}}
+                    <input type="button" class="inde" value="+" ng-click="increment({{order.id}})">
+                </span>
+                <span class="{{class1}}">{{order.quantity}}</span>
+            </div>
+            <div class="col col-20">{{order.quantity * order.price}}</div>
+            <div class="col col-10">
+                <button type="button" class="delete" ng-click="delete({{order.id}})">&#10006;</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row {{class1}}">
+            <div class="col {{class3}}"><b>Total</b></div>
+            <div class="col {{class4}}">{{totalQuantity}}</div>
+            <div class="col col-20">{{totalPrice}}</div>
+            <div class="col col-10"></div>
+        </div>
+        <br><br>
+        <button class="pay {{class1}}" ng-controller="PaymentCtrl" ng-click="pay()">Payment</button>
+    </ion-content>
+</ion-view>
